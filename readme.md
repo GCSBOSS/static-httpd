@@ -14,7 +14,6 @@ In `settings.yml`, write the following content:
 ```yaml
 sourceDir: ../src/
 port: 8001
-
 ```
 > 1. `sourceDir` must point to where your files will be.
 > 2. This path must be relative to `settings.yml` path.
@@ -29,7 +28,7 @@ Test OK!
 ##### Step 4
 Install the server as a service with the following comands:
 ```bash
-npm install -g static-server
+npm install -g static-httpd
 static-service install my-project "/absolute/path/to/my/settings.yml"
 ```
 
