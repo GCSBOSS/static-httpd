@@ -1,0 +1,33 @@
+{
+  "name": "static-httpd",
+  "version": "0.0.1",
+  "description": "A static file HTTP server to run as a service.",
+  "main": "./lib/index.js",
+  "bin": {
+    "static-service": "./bin/static-service.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file",
+    "service",
+    "server",
+    "static",
+    "http"
+  ],
+  "author": "Guill <gcsboss@gmail.com>",
+  "license": "ISC",
+  "preferGlobal": true,
+  "dependencies": {
+    "node-yaml": "^3.1.1",
+    "mime-types": "^2.1.18"
+  },
+  "bugs": {
+    "url": "https://github.com/GCSBOSS/static-httpd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GCSBOSS/static-httpd.git"
+  }
+}
