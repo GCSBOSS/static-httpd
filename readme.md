@@ -6,6 +6,13 @@ This is a simple http server for static content. It will be installed as a servi
 
 > Obs.: For commands, be sure to use a elevated console (admin rights).
 
+## Prerequisites
+- You MUST be running **Windows 10** or **Linux** (untested).
+- You MUST have up to date **Node JS** installed.
+- You MUST have up to date **NPM** installed.
+- If running Windows 10, you must run the following command: `npm install --global --production windows-build-tools`. Obs.: It may fail sometimes.
+- If running Windows 10, you must ensure Phyton 2.7 (installed in the previous item) is in your Path.
+
 ## Usage
 
 ##### Step 1
@@ -29,13 +36,6 @@ Test OK!
 
 ##### Step 4
 Install the server as a service with the following comands:
-
-```bash
-npm install --global --production windows-build-tools
-```
-
-> - Run the command many times if needed be.
-> - Make sure a newly installed Python 2.7 executable is in your path. 
 
 ```
 npm install -g os-service
