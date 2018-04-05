@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-
 if(typeof process.argv[2] != 'string'){
     console.log('\nType 1 of the following commands as parameter: install, run, uninstall.\n');
     return;
 }
 
 var service = require('os-service');
-console.log(process.argv);
+//console.log(process.argv);
 
 if(process.argv[2] == "install"){
     if((typeof process.argv[3] != 'string') || (typeof process.argv[4] != 'string')){
@@ -40,11 +39,8 @@ if(process.argv[2] == "run"){
         return;
     }
 
-    var fs = require('fs');
-    var logStream = fs.createWriteStream (process.argv[1] + ".log");
-
-    service.run (logStream, function () {
-        service.stop (0);
+    service.run(function(){
+        service.stop(0);
     });
 
     var staticServer = require('../lib/index.js');
