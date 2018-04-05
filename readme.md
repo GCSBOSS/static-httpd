@@ -4,6 +4,8 @@ This is a simple http server for static content. It will be installed as a servi
 
 > Warning: This IS NOT production ready.
 
+> Obs.: For commands, be sure to use a elevated console (admin rights).
+
 ## Usage
 
 ##### Step 1
@@ -27,7 +29,16 @@ Test OK!
 
 ##### Step 4
 Install the server as a service with the following comands:
+
 ```bash
+npm install --global --production windows-build-tools
+```
+
+> - Run the command many times if needed be.
+> - Make sure a newly installed Python 2.7 executable is in your path. 
+
+```
+npm install -g os-service
 npm install -g static-httpd
 static-service install my-project "/absolute/path/to/my/settings.yml"
 ```
