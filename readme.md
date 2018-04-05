@@ -21,15 +21,15 @@ In your project directory, create a YAML file with the name you want. I will cal
 ##### Step 2
 In `settings.yml`, write the following content:
 ```yaml
-sourceDir: ../src/
+sourceDir: .
 port: 8001
 ```
-> 1. `sourceDir` must point to where your files will be.
+> 1. `sourceDir` must point to where your served files will be.
 > 2. This path must be relative to `settings.yml` path.
 > 3. `port` defines where the HTTP server will be listening for requests.
 
 ##### Step 3
-In source directory, create a file named `test.txt` with the following content:
+In the same directory, create a file named `test.txt` with the following content:
 ```
 Test OK!
 ```
@@ -44,7 +44,8 @@ static-service install my-project "/absolute/path/to/my/settings.yml"
 ```
 
 ##### Step 5
-Since we are on Windows, go to Services and search for our newly created service whose name is `static-my-project`. Start the service if it is not alreay running.
+- On Windows, start the server running: `net start static-my-project` on elevated shell.
+- On Debian/Ubuntu, start the server running: `sudo service my-project start`.
 
 ##### Step 6
 In your browser, get `http://127.0.0.1:8001/test.txt` and done!
