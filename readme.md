@@ -16,7 +16,7 @@ This is a simple http server for static content. It will be installed as a servi
 ## Usage
 
 ##### Step 1
-In your project directory, create a YAML file with the name you want. I will call mine: `settings.yml` (this one will be used in step 4).
+In a path of your choice, create a YAML file with whatever name. Mine will be `settings.yml` (this one will be used in step 4).
 
 ##### Step 2
 In `settings.yml`, write the following content:
@@ -36,16 +36,15 @@ Test OK!
 
 ##### Step 4
 Install the server as a service with the following comands:
-
 ```
 npm install -g os-service
 npm install -g static-httpd
-static-service install my-project "/absolute/path/to/my/settings.yml"
+static-service install my-test "/absolute/path/to/my/settings.yml"
 ```
 
 ##### Step 5
-- On Windows, start the server running: `net start static-my-project` on elevated shell.
-- On Debian/Ubuntu, start the server running: `sudo service my-project start`.
+- On **Windows**, start the server running: `net start static-my-project` on elevated shell.
+- On **Debian/Ubuntu**, start the server running: `sudo service static-my-test start`.
 
 ##### Step 6
 In your browser, get `http://127.0.0.1:8001/test.txt` and done!
