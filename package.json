@@ -1,6 +1,6 @@
 {
   "name": "static-httpd",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A static file HTTP server to run as a service.",
   "main": "./lib/index.js",
   "bin": {
